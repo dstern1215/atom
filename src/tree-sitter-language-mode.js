@@ -548,8 +548,8 @@ class LanguageLayer {
     if (this.patchSinceCurrentParseStarted) {
       this.patchSinceCurrentParseStarted.splice(
         oldRange.start,
-        oldRange.end,
-        newRange.end,
+        oldRange.getExtent(),
+        newRange.getExtent(),
         oldText,
         newText
       )
